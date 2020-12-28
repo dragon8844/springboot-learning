@@ -6,6 +6,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>hello-world</module>
+        <module>spring-data-jpa</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
