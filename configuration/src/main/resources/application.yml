@@ -1,0 +1,43 @@
+#调整内嵌Tomcat的默认端口8080修改成9000,将上下文默认路径"/"修改为"/configuration"
+server:
+  port: 9000
+  servlet:
+    context-path: /configuration
+
+#配置微信公众号的appId和appSecret
+wx:
+  appId: 123
+  appSecret: xyz
+
+#通过${}获取jdk的版本号
+java:
+  verison: ${java.version}
+
+#通过${} 占位符引用配置文件中的其他配置项内容
+system:
+  name: configuration
+  system: domain=health
+  description: The system ${name} is used for ${domain}.
+
+
+#通过@@占位符动态获取Maven变量
+app:
+  encoding: @project.build.sourceEncoding@
+  java:
+    source: @java.version@
+    target: @java.version@
+
+
+random:
+  #32位随机md5字符串
+  value: ${random.value}
+  #随机int
+  int: ${random.int}
+  #随机long
+  long: ${random.long}
+  #随机uuid
+  uuid: ${random.uuid}
+  #随机10以内int
+  int10: ${random.int[10]}
+  #随机取1024和65535间的int
+  intbetween1024and65535: ${random.int[1024,65535]}
