@@ -1,0 +1,2 @@
+config:
+  env: this is prod config

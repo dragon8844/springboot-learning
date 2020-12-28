@@ -1,23 +1,21 @@
 package com.dragon.configuration;
 
 import lombok.Data;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 /**
- * 通过配置类基于 @Value注解实现
+ * 通过@ConfigurationProperties注解实现
  *
  * @author LiLong
  * @date 2020/12/20
  */
 @Component
 @Data
-public class WxConfig {
+@ConfigurationProperties(prefix = "wx")
+public class WxConfig2 {
 
-    @Value("${wx.appId}")
     private String appId;
 
-    @Value("${wx.appSecret}")
     private String appSecret;
-
 }

@@ -41,3 +41,6 @@ random:
   int10: ${random.int[10]}
   #随机取1024和65535间的int
   intbetween1024and65535: ${random.int[1024,65535]}
+
+
+
