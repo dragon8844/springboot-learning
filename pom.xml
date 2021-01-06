@@ -8,6 +8,7 @@
         <module>hello-world</module>
         <module>spring-data-jpa</module>
         <module>configuration</module>
+        <module>java-spi</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
