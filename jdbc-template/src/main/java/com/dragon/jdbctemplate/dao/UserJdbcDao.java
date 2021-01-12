@@ -45,6 +45,7 @@ public class UserJdbcDao implements UserDao{
 
     @Override
     public Integer insert(User user){
+
         // 创建 KeyHolder 对象，设置返回的主键 ID
         KeyHolder keyHolder = new GeneratedKeyHolder();
         int count = jdbcTemplate.update(INSERT_PREPARED_STATEMENT_CREATOR_FACTORY.newPreparedStatementCreator(

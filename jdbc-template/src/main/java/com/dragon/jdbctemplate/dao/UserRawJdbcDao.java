@@ -211,6 +211,5 @@ public class UserRawJdbcDao implements UserDao{
 
         }
         return count;
-
     }
 }
