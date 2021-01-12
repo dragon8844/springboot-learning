@@ -9,6 +9,8 @@
         <module>spring-data-jpa</module>
         <module>configuration</module>
         <module>java-spi</module>
+        <module>rest-template</module>
+        <module>jdbc-template</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
