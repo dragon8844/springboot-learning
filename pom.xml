@@ -12,6 +12,7 @@
         <module>rest-template</module>
         <module>04-jdbc-template</module>
         <module>05-mybatis-xml</module>
+        <module>06-mybatis-annotation</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
