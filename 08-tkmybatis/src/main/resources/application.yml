@@ -1,0 +1,20 @@
+spring:
+  # datasource 数据源配置内容
+  datasource:
+    url: jdbc:mysql://192.168.100.202:3306/test?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: zhiran_test
+    password: Zhiran123
+
+
+# mybatis-plus 配置内容
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: auto # ID 主键自增
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: com.dragon.mybatisplus.entity

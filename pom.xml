@@ -14,6 +14,7 @@
         <module>05-mybatis-xml</module>
         <module>06-mybatis-annotation</module>
         <module>07-mybatis-plus</module>
+        <module>08-tkmybatis</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
