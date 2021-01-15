@@ -1,6 +1,6 @@
-package com.dragon.jdbctemplate.dao;
+package com.dragon.mybatisxml.mapper;
 
-import com.dragon.jdbctemplate.entity.User;
+import com.dragon.mybatisxml.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -10,10 +10,10 @@ import java.util.Date;
 
 @SpringBootTest
 @Slf4j
-class UserRawJdbcDaoTest {
+class UserMapperTest {
 
     @Resource
-    UserRawJdbcDao userRawJdbcDao;
+    private UserMapper userMapper;
 
     @Test
     void insert() {
@@ -21,33 +21,36 @@ class UserRawJdbcDaoTest {
         user.setUsername("张三");
         user.setPassword("123456");
         user.setCreateTime(new Date());
-        userRawJdbcDao.insert(user);
-        log.info("userId:{}",user.getId());
+        Integer count = userMapper.insert(user);
+        log.info("count:{}", count);
     }
 
     @Test
     void selectById() {
-        User user = userRawJdbcDao.selectById(7);
-        log.info("user:{}",user);
+        User user = userMapper.selectById(8);
+        log.info("user:{}",user.toString());
     }
 
     @Test
     void selectByUsername() {
-        User user = userRawJdbcDao.selectByUsername("张三");
-        log.info("user:{}",user);
+        User user = userMapper.selectByUsername("张三");
+        log.info("user:{}", user.toString());
     }
 
     @Test
     void updateById() {
-        User user = userRawJdbcDao.selectById(7);
+        User user = new User();
         user.setUsername("李四");
-        Integer count = userRawJdbcDao.updateById(user);
+        user.setPassword("111111");
+        Integer count = userMapper.updateById(user);
         log.info("count:{}",count);
     }
 
     @Test
     void deleteById() {
-        Integer count = userRawJdbcDao.deleteById(7);
+        Integer count = userMapper.deleteById(8);
         log.info("count:{}",count);
     }
+
+
 }

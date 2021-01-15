@@ -1,4 +1,4 @@
-package com.dragon.jdbctemplate;
+package com.dragon.mybatisxml;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

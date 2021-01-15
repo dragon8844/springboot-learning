@@ -5,12 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <modules>
-        <module>hello-world</module>
+        <module>01-hello-world</module>
         <module>spring-data-jpa</module>
-        <module>configuration</module>
-        <module>java-spi</module>
+        <module>02-configuration</module>
+        <module>03-java-spi</module>
         <module>rest-template</module>
-        <module>jdbc-template</module>
+        <module>04-jdbc-template</module>
+        <module>05-mybatis-xml</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

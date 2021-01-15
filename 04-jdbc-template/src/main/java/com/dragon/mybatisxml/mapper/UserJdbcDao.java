@@ -1,6 +1,6 @@
-package com.dragon.jdbctemplate.dao;
+package com.dragon.mybatisxml.mapper;
 
-import com.dragon.jdbctemplate.entity.User;
+import com.dragon.mybatisxml.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;

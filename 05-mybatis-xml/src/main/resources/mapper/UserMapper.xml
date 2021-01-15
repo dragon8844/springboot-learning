@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dragon.mybatisxml.mapper.UserMapper">
+
+    <sql id="FIELDS">
+        id, username, password, create_time
+    </sql>
+
+    <insert id="insert" parameterType="User" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO user (
+        username, password, create_time
+        ) VALUES (
+        #{username}, #{password}, #{createTime}
+        )
+    </insert>
+
+    <select id="selectById" parameterType="Integer" resultType="User">
+        SELECT
+        <include refid="FIELDS" />
+        FROM user
+        WHERE id = #{id}
+    </select>
+
+    <select id="selectByUsername" parameterType="String" resultType="User">
+        SELECT
+        <include refid="FIELDS" />
+        FROM user
+        WHERE username = #{username}
+        LIMIT 1
+    </select>
+
+    <update id="updateById" parameterType="User">
+        UPDATE user
+        <set>
+            <if test="username != null">
+                , username = #{username}
+            </if>
+            <if test="password != null">
+                , password = #{password}
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteById" parameterType="Integer">
+        DELETE FROM user WHERE id = #{id}
+    </delete>
+
+
+
+
+
+
+</mapper>
