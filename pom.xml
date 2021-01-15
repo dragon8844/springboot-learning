@@ -13,6 +13,7 @@
         <module>04-jdbc-template</module>
         <module>05-mybatis-xml</module>
         <module>06-mybatis-annotation</module>
+        <module>07-mybatis-plus</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
