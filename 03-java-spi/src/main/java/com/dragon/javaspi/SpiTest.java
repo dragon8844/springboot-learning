@@ -11,7 +11,7 @@ import java.util.ServiceLoader;
 public class SpiTest {
     public static void main(String[] args) {
         ServiceLoader<IAnimal> animals = ServiceLoader.load(IAnimal.class);
-        for(IAnimal animal : animals){
+        for (IAnimal animal : animals) {
             animal.shout();
         }
     }

@@ -10,28 +10,32 @@ import org.springframework.stereotype.Repository;
 public interface UserMapper {
 
     /**
-     *  新增
+     * 新增
+     *
      * @param user
      * @return
      */
     Integer insert(User user);
 
     /**
-     *  根据ID查询
+     * 根据ID查询
+     *
      * @param id
      * @return
      */
     User selectById(Integer id);
 
     /**
-     *  根据username查询
+     * 根据username查询
+     *
      * @param username
      * @return
      */
     User selectByUsername(String username);
 
     /**
-     *  根据ID更新
+     * 根据ID更新
+     *
      * @param user
      * @return
      */
@@ -39,7 +43,8 @@ public interface UserMapper {
 
 
     /**
-     *  根据ID删除
+     * 根据ID删除
+     *
      * @param id
      * @return
      */

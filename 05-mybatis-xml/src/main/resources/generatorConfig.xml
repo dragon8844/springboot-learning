@@ -5,7 +5,8 @@
 
 <generatorConfiguration>
 
-    <classPathEntry location="/Users/lilong/.m2/repository/mysql/mysql-connector-java/8.0.22/mysql-connector-java-8.0.22.jar" />
+    <classPathEntry
+            location="/Users/lilong/.m2/repository/mysql/mysql-connector-java/8.0.22/mysql-connector-java-8.0.22.jar"/>
 
     <context id="testTables" targetRuntime="MyBatis3">
         <commentGenerator>

@@ -14,11 +14,12 @@ import org.springframework.stereotype.Repository;
 public interface UserMapper extends BaseMapper<User> {
 
     /**
-     *  根据username查询
+     * 根据username查询
+     *
      * @param username
      * @return
      */
-    default User selectByUsername(@Param("username") String username){
+    default User selectByUsername(@Param("username") String username) {
         LambdaQueryWrapper<User> wrapper = new QueryWrapper<User>().lambda();
         return selectOne(wrapper.eq(User::getUsername, username));
     }

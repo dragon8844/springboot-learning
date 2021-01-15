@@ -6,10 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;
-
 import java.util.Date;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @Slf4j
@@ -32,7 +29,7 @@ class UserMapperTest {
     @Test
     void selectById() {
         User user = userMapper.selectById(13);
-        log.info("user:{}",user.toString());
+        log.info("user:{}", user.toString());
     }
 
     @Test
@@ -48,12 +45,12 @@ class UserMapperTest {
         user.setUsername("李四");
         user.setPassword("111111");
         Integer count = userMapper.updateById(user);
-        log.info("count:{}",count);
+        log.info("count:{}", count);
     }
 
     @Test
     void deleteById() {
         Integer count = userMapper.deleteById(13);
-        log.info("count:{}",count);
+        log.info("count:{}", count);
     }
 }

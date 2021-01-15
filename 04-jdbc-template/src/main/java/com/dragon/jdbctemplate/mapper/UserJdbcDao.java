@@ -17,11 +17,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *  JDBC Template
+ * JDBC Template
+ *
  * @author lilong
  */
 @Repository
-public class UserJdbcDao implements UserDao{
+public class UserJdbcDao implements UserDao {
 
     /**
      * 声明 INSERT 操作的 PreparedStatementCreatorFactory 对象
@@ -44,12 +45,12 @@ public class UserJdbcDao implements UserDao{
 
 
     @Override
-    public Integer insert(User user){
+    public Integer insert(User user) {
 
         // 创建 KeyHolder 对象，设置返回的主键 ID
         KeyHolder keyHolder = new GeneratedKeyHolder();
         int count = jdbcTemplate.update(INSERT_PREPARED_STATEMENT_CREATOR_FACTORY.newPreparedStatementCreator(
-                Arrays.asList(user.getUsername(),user.getPassword(),user.getCreateTime())),keyHolder);
+                Arrays.asList(user.getUsername(), user.getPassword(), user.getCreateTime())), keyHolder);
         // 设置 ID 主键到 entity 实体中
         if (keyHolder.getKey() != null) {
             user.setId(keyHolder.getKey().intValue());
@@ -85,7 +86,7 @@ public class UserJdbcDao implements UserDao{
     }
 
     @Override
-    public User selectById(Integer id){
+    public User selectById(Integer id) {
         User result = jdbcTemplate.queryForObject("SELECT id, username, password, create_time FROM user WHERE id=?",
                 new BeanPropertyRowMapper<>(User.class), id);
         return result;
@@ -102,11 +103,11 @@ public class UserJdbcDao implements UserDao{
     @Override
     public Integer updateById(User user) {
         return jdbcTemplate.update("UPDATE user SET username = ?, password = ? WHERE id = ?",
-                user.getUsername(),user.getPassword(),user.getId());
+                user.getUsername(), user.getPassword(), user.getId());
     }
 
     @Override
-    public Integer deleteById(Integer id){
+    public Integer deleteById(Integer id) {
         return jdbcTemplate.update("DELETE FROM user WHERE id = ?", id);
     }
 

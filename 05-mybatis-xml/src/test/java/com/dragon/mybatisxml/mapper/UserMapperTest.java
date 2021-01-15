@@ -28,7 +28,7 @@ class UserMapperTest {
     @Test
     void selectById() {
         User user = userMapper.selectById(8);
-        log.info("user:{}",user.toString());
+        log.info("user:{}", user.toString());
     }
 
     @Test
@@ -43,13 +43,13 @@ class UserMapperTest {
         user.setUsername("李四");
         user.setPassword("111111");
         Integer count = userMapper.updateById(user);
-        log.info("count:{}",count);
+        log.info("count:{}", count);
     }
 
     @Test
     void deleteById() {
         Integer count = userMapper.deleteById(8);
-        log.info("count:{}",count);
+        log.info("count:{}", count);
     }
 
 

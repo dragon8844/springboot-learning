@@ -8,12 +8,12 @@ import java.sql.*;
 public class JDBC {
 
     public static void main(String[] args) throws SQLException {
-        String url = "jdbc:mysql://localhost:3306/test" ;
-        String username = "root" ;
-        String password = "root" ;
+        String url = "jdbc:mysql://localhost:3306/test";
+        String username = "root";
+        String password = "root";
 
         //1.通过DriverManager获取connection连接
-        Connection connection = DriverManager.getConnection(url,username,password);
+        Connection connection = DriverManager.getConnection(url, username, password);
 
         //2.创建preparedStatement
         PreparedStatement preparedStatement = connection.prepareStatement("select * from user");
@@ -22,7 +22,7 @@ public class JDBC {
         ResultSet resultSet = preparedStatement.executeQuery();
 
         //4.遍历resultSet结果集
-        while (resultSet.next()){
+        while (resultSet.next()) {
             //resultSet.getString("1");
         }
 

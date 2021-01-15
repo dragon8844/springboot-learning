@@ -8,7 +8,7 @@ package com.dragon.javaspi;
  */
 public interface IAnimal {
     /**
-     *  定义个喊的方法
+     * 定义个喊的方法
      */
     void shout();
 }

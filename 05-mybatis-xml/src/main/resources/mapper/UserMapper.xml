@@ -16,14 +16,14 @@
 
     <select id="selectById" parameterType="Integer" resultType="User">
         SELECT
-        <include refid="FIELDS" />
+        <include refid="FIELDS"/>
         FROM user
         WHERE id = #{id}
     </select>
 
     <select id="selectByUsername" parameterType="String" resultType="User">
         SELECT
-        <include refid="FIELDS" />
+        <include refid="FIELDS"/>
         FROM user
         WHERE username = #{username}
         LIMIT 1

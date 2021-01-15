@@ -23,7 +23,7 @@ class UserDaoTest {
         user.setPassword("123456");
         user.setCreateTime(new Date());
         userJdbcDao.insert(user);
-        log.info("userId:{}",user.getId());
+        log.info("userId:{}", user.getId());
     }
 
     @Test
@@ -33,33 +33,33 @@ class UserDaoTest {
         user.setPassword("123456");
         user.setCreateTime(new Date());
         userJdbcDao.insert(user);
-        log.info("userId:{}",user.getId());
+        log.info("userId:{}", user.getId());
     }
 
     @Test
-    void selectById(){
+    void selectById() {
         User user = userJdbcDao.selectById(4);
         log.info("user:{}", user.toString());
     }
 
     @Test
-    void selectByUsername(){
+    void selectByUsername() {
         User user = userJdbcDao.selectByUsername("张三");
         log.info("user:{}", user.toString());
     }
 
     @Test
-    void updateById(){
+    void updateById() {
         User user = userJdbcDao.selectById(4);
         user.setUsername("李四");
         Integer count = userJdbcDao.updateById(user);
-        log.info("count:{}",count);
+        log.info("count:{}", count);
     }
 
     @Test
-    void deleteById(){
+    void deleteById() {
         Integer count = userJdbcDao.deleteById(4);
-        log.info("count:{}",count);
+        log.info("count:{}", count);
     }
 
 }

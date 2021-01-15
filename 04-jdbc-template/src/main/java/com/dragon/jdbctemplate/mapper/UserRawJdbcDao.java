@@ -9,11 +9,12 @@ import java.sql.*;
 
 
 /**
- *  原生JDBC
+ * 原生JDBC
+ *
  * @author lilong
  */
 @Repository
-public class UserRawJdbcDao implements UserDao{
+public class UserRawJdbcDao implements UserDao {
 
     @Resource
     private DataSource dataSource;
@@ -32,28 +33,28 @@ public class UserRawJdbcDao implements UserDao{
         ResultSet rs = null;
         Integer count = 0;
 
-        try{
+        try {
             connection = dataSource.getConnection();
             statement = connection.prepareStatement(SQL_INSERT, Statement.RETURN_GENERATED_KEYS);
-            statement.setString(1,user.getUsername());
-            statement.setString(2,user.getPassword());
-            statement.setTimestamp(3,new Timestamp(user.getCreateTime().getTime()));
+            statement.setString(1, user.getUsername());
+            statement.setString(2, user.getPassword());
+            statement.setTimestamp(3, new Timestamp(user.getCreateTime().getTime()));
             count = statement.executeUpdate();
             rs = statement.getGeneratedKeys();
-            if(rs.next()){
+            if (rs.next()) {
                 user.setId(rs.getInt(1));
             }
-        }catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
-                if(rs != null){
+                if (rs != null) {
                     rs.close();
                 }
-                if(statement != null){
+                if (statement != null) {
                     statement.close();
                 }
-                if(connection != null){
+                if (connection != null) {
                     connection.close();
                 }
 
@@ -71,29 +72,29 @@ public class UserRawJdbcDao implements UserDao{
         PreparedStatement statement = null;
         ResultSet rs = null;
         User user = null;
-        try{
+        try {
             connection = dataSource.getConnection();
             statement = connection.prepareStatement(SQL_SELECT_ID);
             statement.setInt(1, id);
             rs = statement.executeQuery();
-            if(rs.next()){
+            if (rs.next()) {
                 user = new User();
                 user.setId(rs.getInt("id"));
                 user.setUsername(rs.getString("username"));
                 user.setPassword(rs.getString("password"));
                 user.setCreateTime(rs.getTimestamp("create_time"));
             }
-        }catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
-                if(rs != null){
+                if (rs != null) {
                     rs.close();
                 }
-                if(statement != null){
+                if (statement != null) {
                     statement.close();
                 }
-                if(connection != null){
+                if (connection != null) {
                     connection.close();
                 }
 
@@ -110,29 +111,29 @@ public class UserRawJdbcDao implements UserDao{
         PreparedStatement statement = null;
         ResultSet rs = null;
         User user = null;
-        try{
+        try {
             connection = dataSource.getConnection();
             statement = connection.prepareStatement(SQL_SELECT_USERNAME);
             statement.setString(1, username);
             rs = statement.executeQuery();
-            if(rs.next()){
+            if (rs.next()) {
                 user = new User();
                 user.setId(rs.getInt("id"));
                 user.setUsername(rs.getString("username"));
                 user.setPassword(rs.getString("password"));
                 user.setCreateTime(rs.getTimestamp("create_time"));
             }
-        }catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
-                if(rs != null){
+                if (rs != null) {
                     rs.close();
                 }
-                if(statement != null){
+                if (statement != null) {
                     statement.close();
                 }
-                if(connection != null){
+                if (connection != null) {
                     connection.close();
                 }
 
@@ -150,24 +151,24 @@ public class UserRawJdbcDao implements UserDao{
         ResultSet rs = null;
         Integer count = 0;
 
-        try{
+        try {
             connection = dataSource.getConnection();
             statement = connection.prepareStatement(SQL_UPDATE);
-            statement.setString(1,user.getUsername());
-            statement.setString(2,user.getPassword());
-            statement.setInt(3,user.getId());
+            statement.setString(1, user.getUsername());
+            statement.setString(2, user.getPassword());
+            statement.setInt(3, user.getId());
             count = statement.executeUpdate();
-        }catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
-                if(rs != null){
+                if (rs != null) {
                     rs.close();
                 }
-                if(statement != null){
+                if (statement != null) {
                     statement.close();
                 }
-                if(connection != null){
+                if (connection != null) {
                     connection.close();
                 }
 
@@ -186,22 +187,22 @@ public class UserRawJdbcDao implements UserDao{
         ResultSet rs = null;
         Integer count = 0;
 
-        try{
+        try {
             connection = dataSource.getConnection();
             statement = connection.prepareStatement(SQL_DELETE);
-            statement.setInt(1,id);
+            statement.setInt(1, id);
             count = statement.executeUpdate();
-        }catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
-                if(rs != null){
+                if (rs != null) {
                     rs.close();
                 }
-                if(statement != null){
+                if (statement != null) {
                     statement.close();
                 }
-                if(connection != null){
+                if (connection != null) {
                     connection.close();
                 }
 
