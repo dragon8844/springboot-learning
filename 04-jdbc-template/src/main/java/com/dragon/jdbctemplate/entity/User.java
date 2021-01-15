@@ -1,4 +1,4 @@
-package com.dragon.mybatisxml.entity;
+package com.dragon.jdbctemplate.entity;
 
 import lombok.Data;
 

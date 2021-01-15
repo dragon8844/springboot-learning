@@ -1,6 +1,7 @@
 package com.dragon.mybatisxml.mapper;
 
-import com.dragon.mybatisxml.entity.User;
+import com.dragon.jdbctemplate.entity.User;
+import com.dragon.jdbctemplate.mapper.UserRawJdbcDao;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

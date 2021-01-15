@@ -1,4 +1,4 @@
-package com.dragon.mybatisxml;
+package com.dragon.jdbctemplate;
 
 import java.sql.*;
 

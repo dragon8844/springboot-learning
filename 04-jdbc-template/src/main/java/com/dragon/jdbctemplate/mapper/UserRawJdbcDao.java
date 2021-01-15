@@ -1,6 +1,6 @@
-package com.dragon.mybatisxml.mapper;
+package com.dragon.jdbctemplate.mapper;
 
-import com.dragon.mybatisxml.entity.User;
+import com.dragon.jdbctemplate.entity.User;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
