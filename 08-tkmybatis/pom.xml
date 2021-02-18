@@ -44,6 +44,19 @@
             <version>2.1.5</version>
         </dependency>
 
+        <!-- 实现对 PageHelper 的自动化配置-->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>1.2.5</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.mybatis.spring.boot</groupId>
+                    <artifactId>mybatis-spring-boot-starter</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
         <!-- 方便用单元测试验证-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

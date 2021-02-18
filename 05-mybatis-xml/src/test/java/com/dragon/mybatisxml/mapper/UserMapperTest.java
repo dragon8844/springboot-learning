@@ -51,6 +51,4 @@ class UserMapperTest {
         Integer count = userMapper.deleteById(8);
         log.info("count:{}", count);
     }
-
-
 }
