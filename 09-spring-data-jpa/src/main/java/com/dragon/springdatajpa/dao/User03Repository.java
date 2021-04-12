@@ -30,10 +30,4 @@ public interface User03Repository extends PagingAndSortingRepository<User,Intege
      * @return
      */
     Page<User> findByCreateTimeAfter(Date createTime, Pageable pageable);
-
-
-
-
-
-
 }

@@ -22,7 +22,6 @@ public class User03RepositoryTest {
     @Resource
     User03Repository user03Repository;
 
-
     @Test
     public void testFindByUsername(){
         User user = user03Repository.findByUsername("张三");
@@ -35,7 +34,5 @@ public class User03RepositoryTest {
         PageRequest pageRequest = PageRequest.of(0,10,sort);
         Page<User> page = user03Repository.findByCreateTimeAfter(new Date(), pageRequest);
         log.info("page:{}",page.getTotalElements());
-
     }
-
 }

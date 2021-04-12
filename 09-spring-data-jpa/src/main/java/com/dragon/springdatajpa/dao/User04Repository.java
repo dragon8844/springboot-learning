@@ -48,9 +48,4 @@ public interface User04Repository extends PagingAndSortingRepository<User,Intege
     @Modifying
     Integer updateUsernameById(Integer id, String username);
 
-
-
-
-
-
 }

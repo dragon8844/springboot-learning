@@ -51,5 +51,4 @@ public class User04RepositoryTest {
         log.info("count:{}", count);
 
     }
-
 }
