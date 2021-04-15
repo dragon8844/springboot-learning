@@ -1,2 +1,24 @@
-# springboot-learning
-SpringBoot 2x 系列学习
+# 简介
+Spring Boot 2.x系列的基础教程，由浅入深，一步一步学习Spring Boot，最后学到的不单单是基础。
+教程地址：https://juejin.cn/user/1380642334969613，个人博客：https://drag0n.gitee.io/同步更新
+
+
+# 仓库地址：
+
+Github：[https://github.com/dragon8844/springboot-learning](https://github.com/dragon8844/springboot-learning)
+Gitee:[https://gitee.com/drag0n/springboot-learning](https://gitee.com/drag0n/springboot-learning)
+
+
+# 教程内容
+
+* SpringBoot 2.x 系列：快速入门: [https://juejin.cn/post/6908559633272143879](https://juejin.cn/post/6908559633272143879)
+
+
+
+
+
+ 
+
+
+
+
