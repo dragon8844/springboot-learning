@@ -15,6 +15,7 @@
         <module>07-mybatis-plus</module>
         <module>08-tkmybatis</module>
         <module>09-spring-data-jpa</module>
+        <module>10-restful-web</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
