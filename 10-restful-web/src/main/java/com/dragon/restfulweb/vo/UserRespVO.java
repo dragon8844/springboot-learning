@@ -14,6 +14,4 @@ public class UserRespVO implements Serializable {
     private Integer id;
     private String username;
     private Date createTime;
-
-
 }
