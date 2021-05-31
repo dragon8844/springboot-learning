@@ -8,7 +8,7 @@
         <module>01-hello-world</module>
         <module>02-configuration</module>
         <module>03-java-spi</module>
-        <module>rest-template</module>
+        <module>11-rest-template</module>
         <module>04-jdbc-template</module>
         <module>05-mybatis-xml</module>
         <module>06-mybatis-annotation</module>
@@ -16,6 +16,7 @@
         <module>08-tkmybatis</module>
         <module>09-spring-data-jpa</module>
         <module>10-restful-web</module>
+        <module>spring-task</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
