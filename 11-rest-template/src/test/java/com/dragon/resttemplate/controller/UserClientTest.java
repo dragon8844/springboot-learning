@@ -57,5 +57,18 @@ public class UserClientTest {
     }
 
 
+    @Test
+    public void put() {
+        UserReqVO userReqVO = new UserReqVO();
+        userReqVO.setUsername("张三");
+        userReqVO.setPassword("123456");
+        R r = userClient.put(1,userReqVO);
+        log.info("result : {}", r);
+    }
 
+    @Test
+    public void delete() {
+        R r = userClient.delete(1);
+        log.info("result : {}",r);
+    }
 }

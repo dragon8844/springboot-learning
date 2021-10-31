@@ -23,7 +23,6 @@ public class UserClient {
     @Resource
     RestTemplate restTemplate;
 
-
     public R<UserRespVO> getForObject(Integer id){
         Map<String, Object> uriVariables = new HashMap<>(1);
         uriVariables.put("id", id);
@@ -39,7 +38,6 @@ public class UserClient {
         return r.getBody();
     }
 
-
     public R<Boolean>  postForObject(UserReqVO userReqVO){
         R r = restTemplate.postForObject("http://localhost:8080/v1/user", userReqVO, R.class);
         return r;
@@ -49,7 +47,6 @@ public class UserClient {
         ResponseEntity<R> r = restTemplate.postForEntity("http://localhost:8080/v1/user", userReqVO, R.class);
         log.info(r.getHeaders().toString());
         return r.getBody();
-
     }
 
     /**
@@ -64,4 +61,13 @@ public class UserClient {
         return r.getBody();
     }
 
+    public R<Boolean> put(Integer id, UserReqVO userReqVO){
+        restTemplate.put("http://localhost:8080/v1/user/{id}", userReqVO, id);
+        return R.ok(true);
+    }
+
+    public R<Boolean> delete(Integer id){
+        restTemplate.delete("http://localhost:8080/v1/user/{id}", id);
+        return R.ok(true);
+    }
 }

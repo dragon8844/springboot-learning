@@ -17,6 +17,7 @@
         <module>09-spring-data-jpa</module>
         <module>10-restful-web</module>
         <module>spring-task</module>
+        <module>elasticsearch</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
